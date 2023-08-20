@@ -1,0 +1,14 @@
+input {
+  outline: transparent;
+}
+
+.logo--title,
+h1 {
+  font-family: "SEGA LOGO FONT", sans-serif;
+  text-transform: uppercase;
+  color: #0ccac4;
+}
+
+.scroll::-webkit-scrollbar {
+  display: none;
+}
