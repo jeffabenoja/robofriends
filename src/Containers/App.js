@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import Header from "../Component/Header"
 import SearchComponent from "../Component/SearchComponent"
 import Scroll from "../Component/Scroll"
+import CatchError from "../Component/CatchError"
 import CardList from "../Component/CardList"
 
 const App = () => {
@@ -39,7 +40,9 @@ const App = () => {
       <Header />
       <SearchComponent searchChange={searchChange} />
       <Scroll>
-        <CardList robots={filteredRobots} />
+        <CatchError>
+          <CardList robots={filteredRobots} />
+        </CatchError>
       </Scroll>
     </div>
   )
