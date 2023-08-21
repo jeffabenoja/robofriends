@@ -10,19 +10,22 @@ const App = () => {
   const [data, setData] = useState([])
   const [isLoading, setIsLoading] = useState(true)
 
+  async function fetchData(apiUrl) {
+    try {
+      const response = await fetch(apiUrl)
+      const data = await response.json()
+      setData(data)
+      setIsLoading(false)
+    } catch (error) {
+      console.error("Error fetching data: ", error)
+      setIsLoading(false)
+    }
+  }
+
   useEffect(() => {
     const apiUrl = "https://jsonplaceholder.typicode.com/users"
 
-    fetch(apiUrl)
-      .then((response) => response.json())
-      .then((data) => {
-        setData(data)
-        setIsLoading(false)
-      })
-      .catch((error) => {
-        console.error("Error fetching data: ", error)
-        setIsLoading(false)
-      })
+    fetchData(apiUrl)
   }, [])
 
   const searchChange = (event) => {
