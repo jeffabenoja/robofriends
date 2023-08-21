@@ -3,7 +3,7 @@ import Header from "../Component/Header"
 import SearchComponent from "../Component/SearchComponent"
 import Scroll from "../Component/Scroll"
 import CatchError from "../Component/CatchError"
-import CardList from "../Component/CardList"
+import CardList from "../Component/Card/CardList"
 
 const App = () => {
   const [searchField, setSearchField] = useState("")
