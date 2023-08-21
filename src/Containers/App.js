@@ -23,9 +23,9 @@ const App = () => {
   }
 
   useEffect(() => {
-    //const apiUrl = "https://jsonplaceholder.typicode.com/users"
+    const apiUrl = "https://jsonplaceholder.typicode.com/users"
 
-    fetchData("https://jsonplaceholder.typicode.com/users")
+    fetchData(apiUrl)
   }, [])
 
   const searchChange = (event) => {
