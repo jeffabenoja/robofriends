@@ -5,7 +5,7 @@ export default function CatchError(props) {
   const [caught, setCaught] = useState([null, null])
 
   useEffect(() => {
-    const [error, info] = caught
+    const [error] = caught
     if (error) {
       console.error("Caught an error:", error)
       setHasError(true)
